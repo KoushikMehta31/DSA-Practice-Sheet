@@ -1,0 +1,20 @@
+
+class Solution {
+    public ListNode mergeNodes(ListNode head) {
+        ListNode modify = head.next;
+        ListNode nextsum = modify;
+
+        while(nextsum != null){
+            int sum = 0;
+            while(nextsum.val != 0){
+                sum += nextsum.val;
+                nextsum = nextsum.next;
+            }
+            modify.val = sum;
+            nextsum = nextsum.next;
+            modify.next = nextsum;
+            modify = modify.next;
+        }
+        return head.next;
+    }
+}
