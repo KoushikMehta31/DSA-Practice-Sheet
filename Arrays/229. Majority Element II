@@ -1,7 +1,7 @@
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
-        Integer majority1 = 0;
-        Integer majority2 = 0;
+        int majority1 = 0;
+        int majority2 = 0;
         int count1 = 0;
         int count2 = 0;
 
